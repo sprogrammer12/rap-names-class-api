@@ -49,8 +49,10 @@ app.get('/api/:rapperName', (req, res) => {
 
 //  colon is to let us know thats a query parameter
 
-app.listen(PORT, () => {
+app.listen(process.env.PORT ||PORT, () => {
     console.log(`This server is running on port ${PORT}!`)
 })
 // have to tell the server listen to requests from a port number
 // Want to klnow when the server is running
+// Heroku might not like port 8000, so this is saying use the port that heroku gives us, or if it doesn't exist
+//  use the port 8000 we defined
