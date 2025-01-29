@@ -42,7 +42,7 @@ app.get('/', (req, res) => {
 // req is request, res is response
 // Dirname is wherever the server.js file is located, thats where we are going to look for our files
 
-app.use(express.static(path.join(__dirname, "js")));
+app.use(express.static(path.join(__dirname, "js/main.js")));
 
 app.get('/api/:rapperName', (req, res) => {
     const rapperName = req.params.rapperName.toLowerCase()
