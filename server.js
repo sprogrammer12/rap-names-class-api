@@ -10,6 +10,11 @@ const app = express()
 
 const PORT = 8000
 
+// To make request from client to server, we need to enable cors
+const cors = require('cors')
+
+app.use(cors()) 
+
 const rappers = {
     '21 savage':{
         'age': 29,
@@ -28,11 +33,6 @@ const rappers = {
     } 
 }
 
-// app.use((req, res, next) => {
-//     res.header('Access-Control-Allow-Origin', '*'); // Allow all origins
-//     res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
-//     next();
-// });
 
 app.get('/', (req, res) => {
     res.sendFile(__dirname + '/index.html')
