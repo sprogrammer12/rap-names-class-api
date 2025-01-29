@@ -10,9 +10,11 @@ const app = express()
 
 const PORT = 8000
 
-// To make request from client to server, we need to enable cors
+// To make request from client to server, we need to enable cors 
+// did npm install cors --save
 const cors = require('cors')
 
+// did npm install path --save
 const path = require('path')
 
 app.use(cors()) 
@@ -44,6 +46,7 @@ app.get('/', (req, res) => {
 // req is request, res is response
 // Dirname is wherever the server.js file is located, thats where we are going to look for our files
 
+// if it was public file, inside js inside main.js it would be 'public' behind dirname
 // app.use(express.static(__dirname +  "js/main.js"));
 app.use(express.static(path.join(__dirname, 'js')));
 
