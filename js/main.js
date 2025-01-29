@@ -1,7 +1,7 @@
 document.querySelector("button").addEventListener("click", response)
 
 function response(){
-    const rapperName = document.querySelector("input").value
+    const rapperName = document.getElementById("rappersName").value
     console.log(rapperName)
     alert('response')
 }
