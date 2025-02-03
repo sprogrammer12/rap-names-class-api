@@ -73,7 +73,7 @@ app.get('/', (req, res) => {
 
 // if it was public file, inside js inside main.js it would be 'public' behind dirname
 // app.use(express.static(__dirname +  "js/main.js"));
-app.use(express.static('public'));
+app.use(express.static('public'))
 
 app.get('/api/:rapperName', (req, res) => {
     const rapperName = req.params.rapperName.toLowerCase()
